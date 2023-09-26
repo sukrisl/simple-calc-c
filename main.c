@@ -97,20 +97,20 @@ int main(int argc, char *argv[]) {
 	printf("Input arithmetic equation: ");
 	
 	// String buffer to hold user input
-	char formulaStr[MAX_INPUT_STR];
+	char equationStr[MAX_INPUT_STR];
 	
 	// Get user input
-	scanf("%[^\n]s", formulaStr);
+	scanf("%[^\n]s", equationStr);
 	
 	// Parse input string and perform calculation
 	double result = 0;
-	if (!parseString(formulaStr, &result)) {
+	if (!parseString(equationStr, &result)) {
 		printf("Cannot compute! Input invalid.\n");
 		return 1;
 	}
 	
 	// Print out the calculation result
-	printf("The result is %s = %.0f\n", formulaStr, result);
+	printf("The result is %s = %.0f\n", equationStr, result);
 	
 	return 0;
 }
